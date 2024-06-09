@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Deploy app') {
+      steps {
+        sh 'sudo cp -R * /var/www/html/'
+      }
+    }
+
   }
 }
